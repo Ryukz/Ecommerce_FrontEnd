@@ -1,0 +1,46 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container register-form" style="margin-top: 100px;">
+            <div class="form">
+                <div class="note">
+                    <p style="font-size: 20px;">Create Your Free Account Now!!</p>
+                </div>
+
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name *"  [(ngModel)]="user.name"/>
+                            </div>
+<!--                            <div class="form-group">-->
+<!--                                <input type="text" class="form-control" placeholder="Phone Number *"  [(ngModel)]="user.phoneNumber"  />-->
+<!--                            </div>-->
+                          <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email Id *"  [(ngModel)]="user.email"  />
+                          </div>
+                        </div>
+
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Your Username *"  [(ngModel)]="user.username" >
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Password *"  [(ngModel)]="user.password" >
+                            </div>
+<!--                            <div class="form-group">-->
+<!--                                <input type="text" class="form-control" placeholder="Confirm Password *" />-->
+<!--                            </div>-->
+                        </div>
+                    </div>
+                    <button type="button" class="btnSubmit"  (click)="addUsers(user)"  >Submit</button>
+                </div>
+            </div>
+        </div>
+        <!-- <div style="margin-top:150px;">
+         <app-footer></app-footer>
+         </div> -->

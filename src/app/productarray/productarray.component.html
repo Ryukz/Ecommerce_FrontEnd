@@ -1,0 +1,85 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+
+    <!-- <div style="margin-top: 120px;">
+        <app-footer></app-footer>
+    </div> -->
+
+
+
+
+<div>
+  <div class="row">
+    <div class="col-md-3">
+
+
+      <div class="row" style="margin-top: 70px; margin-left: 20px">
+        <div class="card">
+          <div class="card-body" style="height:400px">
+            <b style="margin-left: 50px">Filters</b><br>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="same" (click)="hello()" name="rtx">Price Low to High
+              </label>
+            </div><br>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="same" (click)="hello1()" name="rtx">Price High to Low
+              </label>
+            </div><br>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="same" name="rtx" (click)="hello2()">By Name
+              </label>
+            </div><br>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-9">
+
+
+
+      <div class="container">
+        <h3 class="h3">Products</h3>
+
+
+        <div class="row">
+          <div *ngFor="let s of products|tablesort:x:y" class="col-3" style="margin-bottom: 2rem">
+            <div>
+              <div class="product-grid6">
+                <div class="product-image6" style="height: 250px;">
+                  <a (click)="fun(s)">
+                    <img class="pic-1" src="{{s.image}}">
+                  </a>
+                </div>
+                <div class="product-content">
+                  <h3 class="title"><a href="#">{{s.name}}</a></h3>
+                  <div class="price">${{s.price}}
+                    <span>$14.00</span>
+                  </div>
+                </div>
+                <ul class="social">
+                  <li><a data-tip="Quick View" (click)="fun(s)"><i class="fa fa-search"></i></a></li>
+                  <li><a href="#" data-tip="Add to Cart" (click)="addThisToCart(s.id)"><i class="fa fa-shopping-cart"></i></a></li>
+                  <li><a  data-tip="Edit Product" (click)="fun1(s)"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <hr>
+
+
+    </div>
+  </div>
+</div>

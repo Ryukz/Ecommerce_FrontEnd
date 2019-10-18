@@ -1,0 +1,138 @@
+<!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+<!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<!--&lt;!&ndash;&#45;&#45;&#45;&#45; Include the above in your HEAD tag &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+<!--<div class="container">-->
+<!--	<table id="cart" class="table table-hover table-condensed">-->
+<!--    				<thead>-->
+<!--						<tr>-->
+<!--							<th style="width:50%">Product</th>-->
+<!--							<th style="width:10%">Price</th>-->
+<!--							<th style="width:8%">Quantity</th>-->
+<!--							<th style="width:22%" class="text-center">Subtotal</th>-->
+<!--							<th style="width:10%"></th>-->
+<!--						</tr>-->
+<!--					</thead>-->
+<!--					<tbody>-->
+<!--						<tr>-->
+<!--							<td data-th="Product">-->
+<!--								<div class="row">-->
+<!--									<div class="col-md-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>-->
+<!--									<div class="col-md-10">-->
+<!--										<h4 class="nomargin">Product 1</h4>-->
+<!--										<p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--							</td>-->
+<!--							<td data-th="Price">$1.99</td>-->
+<!--							<td data-th="Quantity">-->
+<!--								<input type="number" class="form-control text-center" value="1">-->
+<!--							</td>-->
+<!--							<td data-th="Subtotal" class="text-center">1.99</td>-->
+<!--							<td class="actions" data-th="">-->
+<!--								<button class="btn btn-info btn"><i class="fa fa-refresh"></i></button>-->
+<!--								<button class="btn btn-danger btn"><i class="fa fa-trash-o"></i></button>-->
+<!--							</td>-->
+<!--                        </tr>-->
+
+<!--                        <tr>-->
+<!--							<td data-th="Product">-->
+<!--								<div class="row">-->
+<!--									<div class="col-md-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>-->
+<!--									<div class="col-md-10">-->
+<!--										<h4 class="nomargin">Product 1</h4>-->
+<!--										<p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--							</td>-->
+<!--							<td data-th="Price">$1.99</td>-->
+<!--							<td data-th="Quantity">-->
+<!--								<input type="number" class="form-control text-center" value="1">-->
+<!--							</td>-->
+<!--							<td data-th="Subtotal" class="text-center">1.99</td>-->
+<!--							<td class="actions" data-th="">-->
+<!--								<button class="btn btn-info btn"><i class="fa fa-refresh"></i></button>-->
+<!--								<button class="btn btn-danger btn"><i class="fa fa-trash-o"></i></button>-->
+<!--							</td>-->
+<!--                        </tr>-->
+
+<!--                        <tr>-->
+<!--							<td data-th="Product">-->
+<!--								<div class="row">-->
+<!--									<div class="col-md-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>-->
+<!--									<div class="col-md-10">-->
+<!--										<h4 class="nomargin">Product 1</h4>-->
+<!--										<p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--							</td>-->
+<!--							<td data-th="Price">$1.99</td>-->
+<!--							<td data-th="Quantity">-->
+<!--								<input type="number" class="form-control text-center" value="1">-->
+<!--							</td>-->
+<!--							<td data-th="Subtotal" class="text-center">1.99</td>-->
+<!--							<td class="actions" data-th="">-->
+<!--								<button class="btn btn-info btn"><i class="fa fa-refresh"></i></button>-->
+<!--								<button class="btn btn-danger btn"><i class="fa fa-trash-o"></i></button>-->
+<!--							</td>-->
+<!--						</tr>-->
+<!--					</tbody>-->
+<!--					<tfoot>-->
+<!--						<tr class="visible-xs">-->
+<!--							<td class="text-center"><strong>Total 1.99</strong></td>-->
+<!--						</tr>-->
+<!--						<tr>-->
+<!--							<td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>-->
+<!--							<td colspan="2" class="hidden-xs"></td>-->
+<!--							<td class="hidden-xs text-center"><strong>Total $1.99</strong></td>-->
+<!--							<td><a href="#" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>-->
+<!--						</tr>-->
+<!--					</tfoot>-->
+<!--				</table>-->
+<!--</div>-->
+<!--<app-nav-bar></app-nav-bar>-->
+<div class="container-fluid">
+  <table class="table table-hover table-condensed">
+    <thead>
+    <tr>
+      <th style="width:30%" class="text-center">Product</th>
+      <th style="width:20%" class="text-center">Price</th>
+      <th style="width:10%" class="text-center">Quantity</th>
+      <th style="width:25%" class="text-center">Subtotal</th>
+      <th style="width:15%" class="text-center"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of prod">
+      <td>
+        <div class="row">
+          <div class="col-sm-2 hidden-xs">
+            <img src="{{p.product.image}}" (click)="navTOProductDetail(p.product.id)" height="80px" width="80px" alt="image" class="img-responsive dataTableImg"/></div>
+          <div class="pt-2"style="margin-left: 90px" (click)="navTOProductDetail(p.product.id)" >{{p.product.name}}</div>
+        </div>
+      </td>
+      <td  class="text-center pt-4"> &#8377; {{p.product.price}}</td>
+      <td>
+        <button (click)="removeOne(p.product.id)">-</button>{{p.quantity}}<button (click)="addOne(p.product.id)">+</button>
+      </td>
+      <td class="text-center pt-4">&#8377;{{(p.quantity)*(p.product.price)}}</td>
+      <td><button class=" btn btn-danger mt-2" (click)="removeProduct(p.product.id)">remove</button></td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="hidden-xs text-center"><strong>&#8377;{{total}}</strong></td>
+    </tr>
+    </tfoot>
+  </table>
+
+  <div class="text-align">
+    <button class="btn btn-secondary " style="margin-left: 35%" routerLink="/home" >Continue Shopping</button>
+    <button class="btn btn-secondary ml-4" (click)="checkOut()">proceed to checkout</button>
+  </div>
+</div>

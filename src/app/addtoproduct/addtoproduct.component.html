@@ -1,0 +1,46 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container register-form" style="margin-top: 100px;">
+  <div class="form">
+    <div class="note">
+      <p style="font-size: 20px;">Welcome Back Admin!!</p>
+    </div>
+<!--    <div class="alert alert-warning">Wrong Email Id/Password</div>-->
+    <!--              <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>-->
+
+    <div class="form-content">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter the ID *" value=""  [(ngModel)]="product.id" />
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter the category of Product *" value="" [(ngModel)]="product.category"/>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter the detail of Product *" value="" [(ngModel)]="product.details" />
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter the Image url of Product *" value="" [(ngModel)]="product.image" />
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter name  of Product *" value="" [(ngModel)]="product.name" />
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter Price of Product *" value=""  [(ngModel)]="product.price"/>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btnSubmit" (click)="addProduct(product)">Add</button>
+    </div>
+  </div>
+</div>
+
+<!-- <div style="margin-top:150px;">
+<app-footer></app-footer>
+<app-footer></app-footer>
+</div> -->
